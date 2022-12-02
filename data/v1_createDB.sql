@@ -1,7 +1,7 @@
 -- TODO 1.3a : Créer les tables manquantes et modifier celles ci-dessous
 CREATE TABLE IF NOT EXISTS LesSportifs
 (
-  numSp NUMBER(4),
+  numSp NUMBER(4) PRIMARY KEY,
   nomSp VARCHAR2(20),
   prenomSp VARCHAR2(20),
   pays VARCHAR2(20),
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS LesEpreuves
 CREATE TABLE IF NOT EXISTS LesEquipes
 (
 	numEq NUMBER(4) PRIMARY KEY NOT NULL,
-	nbSportifsEq NUMBER(3),
+	pays VARCHAR2(20),
 	CONSTRAINT SP_CK3 CHECK(numEq > 0)
 );
 
@@ -54,12 +54,15 @@ CREATE TABLE IF NOT EXISTS LesParticipants
 CREATE TABLE IF NOT EXISTS LesResultats
 (
 	numEp NUMBER(3) PRIMARY KEY,
-	md_gold NUMBER(4),
-	md_silver NUMBER(4),
-	md_bronze NUMBER(4),
+	gold NUMBER(4),
+	silver NUMBER(4),
+	bronze NUMBER(4),
+	FOREIGN KEY (gold) REFERENCES LesParticipants (numP),
+	FOREIGN KEY (silver) REFERENCES LesParticipants (numP),
+	FOREIGN KEY (bronze) REFERENCES LesParticipants (numP),
 	CONSTRAINT RE_CK1 CHECK (gold>0),
 	CONSTRAINT RE_CK2 CHECK (silver>0),
-	CONSTRAINT RE_CK3 CHECK (bronze> 0)
+	CONSTRAINT RE_CK3 CHECK (bronze>0)
 );
 
 -- TODO 1.4a : ajouter la définition de la vue LesAgesSportifs

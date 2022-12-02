@@ -28,8 +28,11 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QTabWidget" name="tabWidget">
+     <property name="toolTipDuration">
+      <number>12</number>
+     </property>
      <property name="currentIndex">
-      <number>5</number>
+      <number>4</number>
      </property>
      <widget class="QWidget" name="tabEpreuves">
       <attribute name="title">
@@ -227,11 +230,6 @@
            <string>dateNaisSp</string>
           </property>
          </column>
-         <column>
-          <property name="text">
-           <string>numEq</string>
-          </property>
-         </column>
         </widget>
        </item>
        <item>
@@ -285,7 +283,7 @@
      </widget>
      <widget class="QWidget" name="tabEquipes">
       <attribute name="title">
-       <string>Page</string>
+       <string>LesEquipes</string>
       </attribute>
       <widget class="QLabel" name="label_equipes">
        <property name="geometry">
@@ -375,7 +373,7 @@
      </widget>
      <widget class="QWidget" name="tabEquipiers">
       <attribute name="title">
-       <string>Page</string>
+       <string>LesEquipiers</string>
       </attribute>
       <widget class="QTableWidget" name="tableEquipiers">
        <property name="geometry">
@@ -468,13 +466,13 @@
      </widget>
      <widget class="QWidget" name="tabParticipants">
       <attribute name="title">
-       <string>Page</string>
+       <string>LesParticipants</string>
       </attribute>
       <widget class="QTableWidget" name="tableParticipants">
        <property name="geometry">
         <rect>
-         <x>-10</x>
-         <y>0</y>
+         <x>10</x>
+         <y>10</y>
          <width>928</width>
          <height>477</height>
         </rect>
@@ -561,7 +559,7 @@
      </widget>
      <widget class="QWidget" name="tabResultats">
       <attribute name="title">
-       <string>Page</string>
+       <string>LesResultats</string>
       </attribute>
       <widget class="QTableWidget" name="tableResultats">
        <property name="geometry">
