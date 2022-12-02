@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS LesResultats
 
 -- TODO 1.4a : ajouter la définition de la vue LesAgesSportifs
 CREATE VIEW IF NOT EXISTS LesAgesSportifs AS
-	SELECT numSp, nomSp, prenomSp, pays, categorieSp, dateNaisSp, DATEDIFF(year, dateNaisSp, CURRENT_DATE)
+	SELECT numSp, nomSp, prenomSp, pays, categorieSp, dateNaisSp, DATE('now') - DATE(dateNaisSp) AS age
 	FROM LesSportifs;
 
 -- TODO 1.5a : ajouter la définition de la vue LesNbsEquipiers

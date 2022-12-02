@@ -20,3 +20,6 @@ DROP TRIGGER IF EXISTS DisjointSportifsUpdate1;
 DROP TRIGGER IF EXISTS DisjointSportifsUpdate2;
 DROP TRIGGER IF EXISTS DisjointEquipesDelete;
 DROP TRIGGER IF EXISTS DisjointSportifsDelete;
+
+DROP TRIGGER IF EXISTS DisjointParticpantsDelete1;
+DROP TRIGGER IF EXISTS DisjointParticpantsDelete2;
